@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="../../css/normalize.css" />
+  <link rel="stylesheet" href="../../css/skeleton.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="eleven column" style="margin-top: 10%">
+        <div class="row">
+          <div class="eleven columns"><h2>{{title}}</h2></div>
+          <div class="one columns"> <a class="button button-primary" href="/publisher">Back</a></div>
+        </div>
+        <form>
+          {{#publisher}}
+            <div class="row">
+              <div class="six columns">
+                <label for="publisher">Publisher</label>
+                <input class="u-full-width" type="text" readonly id="publisher" value="{{publisher}}">
+              </div>
+              <div class="six columns">
+                <label for="country">Country</label>
+                <input class="u-full-width" type="text" readonly id="country" value="{{country}}">
+              </div>
+            </div>
+            <div class="row">
+              <div class="six columns">
+                <label for="founded">Founded</label>
+                <input class="u-full-width" type="number" readonly id="founded" value="{{founded}}">
+              </div>
+              <div class="six columns">
+                <label for="genere">Genere</label>
+                <input class="u-full-width" type="text" readonly id="genere" value="{{genere}}">
+              </div>
+            </div>
+            <div class="row">
+              <div class="six columns">
+                <label>Books</label>
+                <a href="/book/{{books_book_id}}"/>{{books_title}}</a>
+                <br />
+                <a href="/book/{{books_book_id_2}}"/>{{books_title_2}}</a>
+              </div>
+            </div>
+          {{/publisher}}
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
